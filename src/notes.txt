@@ -1,0 +1,52 @@
+warning for key id
+fix add user in Users page
+create seed file.  repo 401
+
+
+sequelize model:generate --name Tasks --attributes taskID:integer,desc:string,firstName:string,lastName:string,image:string,completed:string
+
+sequelize seed:generate --name Tasks
+
+family2=# CREATE TABLE "tasks" (
+    taskID int,
+    LastName varchar(255),
+    FirstName varchar(255),
+    image varchar(255),
+    description varchar(255),complete varchar(255)
+);
+
+INSERT INTO tasks (taskid, lastname, firstname, image,
+ description, complete)
+VALUES
+(default,1, "Jones", "Kelly", "http", "cut grass","no");
+
+INSERT INTO "tasks" VALUES
+(default,1, Jone", Kelly, http, cut grass,no);
+
+ taskid | lastname | firstname | image | description | complete
+
+
+ example from cb example
+
+   componentDidMount = async () => {
+    const friendOne = await axios.get("https://randomuser.me/api/");
+    const friendTwo = await axios.get("https://randomuser.me/api/");
+    const friendThree = await axios.get("https://randomuser.me/api/");
+    const friendFour = await axios.get("https://randomuser.me/api/");
+    const friendFive = await axios.get("https://randomuser.me/api/");
+    const response = await axios.get ('http://localhost:3004/post/all');
+    const kids = [
+      friendOne.data.results[0],
+      friendTwo.data.results[0],
+      friendThree.data.results[0],
+      friendFour.data.results[0],
+      friendFive.data.results[0]
+    ];
+    this.setState({
+      potentialKids: kids,
+      //
+      apiDataLoaded: true
+    })
+    //console.log(response)
+  }
+  
