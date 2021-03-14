@@ -16,9 +16,9 @@ class PostContainer extends Component {
 
   
   componentDidMount = () => {
-    this.createPost();
+    this.createPostold();
   };
-  createPost = async () => {
+  createPostold = async () => {
     const response = await axios.get('http://localhost:3004/task/all');
     this.setState({
       tasks: response.data,
@@ -30,14 +30,14 @@ class PostContainer extends Component {
       [e.target.name]: e.target.value,
     });
   };
-  createPost = async (e) => {
+  createPostols = async (e) => {
     // e.preventDefault();
     const data = {
       title: this.state.title,
       // password: this.state.password,
     };
     console.log(data);
-    const response = await axios.post('http://localhost:3004/post/createPost', data);
+    const response = await axios.post('http://localhost:3004/post/createPostold', data);
     console.log(response);
   };
 
@@ -57,7 +57,7 @@ class PostContainer extends Component {
     });
     return (
       <div className='App'>
-        <form onSubmit={this.createPost}>
+        <form onSubmit={this.createPostold}>
           <input
             name='desc'
             type='text'

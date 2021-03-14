@@ -1,14 +1,14 @@
 header {
     display: flex;
     flex-direction: row;   
-    background-image: linear-gradient(to right, brown , yellow);
+    background-image: linear-gradient(to right, brown , blue);
     height: 140px;      
 }
 
 .headerBottomBorder {
     height:3px;
     width: 100%;
-    background-image: linear-gradient(to right, brown , yellow);
+    background-image: linear-gradient(to right, brown , blue);
 
 }
 .logo {
@@ -92,13 +92,14 @@ header {
 
 nav {
     position: fixed;
+    background-color: red;
     height: fit-content;
     width: 100%;
-    margin-left: 200px;
+    /* margin-left: 20px; */
 }
 
 .headerNav {
-    background-color: #2f3640;
+    background-color: blue;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
     height: 100px;

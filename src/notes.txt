@@ -1,11 +1,17 @@
 warning for key id
-fix add user in Users page
-create seed file.  repo 401
+task order by
+edit task
+how does login work to request auth
+home or landing page
+button to refresh horse pic
+
 
 
 sequelize model:generate --name Tasks --attributes taskID:integer,desc:string,firstName:string,lastName:string,image:string,completed:string
+sequelize model:generate --name Parts --attributes eventID:integer,desc:string,firstName:string,lastName:string,image:string,completed:string
+sequelize model:generate --name Shops --attributes eventID:integer,desc:string,firstName:string,lastName:string,image:string,completed:string
 
-sequelize seed:generate --name Tasks
+sequelize seed:generate --name Parts
 
 family2=# CREATE TABLE "tasks" (
     taskID int,

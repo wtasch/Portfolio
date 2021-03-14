@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import '../TaskList.css';
 
 //import './App.css';
 class TaskList extends Component {
@@ -8,7 +9,7 @@ class TaskList extends Component {
     super(props);
     this.state = {
       tasks: [],
-      eventId: 0,
+      eventId: '',
       desc: '',
       firstName: '',
       lastName: '',
@@ -37,7 +38,7 @@ class TaskList extends Component {
 
   createTask = async (e) => {
     e.preventDefault();
-    this.getTasks();
+    //this.getTasks();
     const data = {
       eventId: this.state.eventId,
       desc: this.state.desc,
@@ -49,6 +50,7 @@ class TaskList extends Component {
     console.log(data);
     const response = await axios.post('http://localhost:3004/task/createTask', data);
     console.log(response);
+    this.getTasks();
   };
 
   deleteTask=  async (e) => {
@@ -57,24 +59,39 @@ class TaskList extends Component {
     console.log(deleteTask)
     this.getTasks();
 }
-  render() {
+  render() { 
+  
+    <h2>Task List</h2>
     const tasks = this.state.tasks.map((task) => {
       return (
-        <div key="firstName">
-          <h3>{task.desc}</h3>
-          <img src={task.img} alt='family picture' />
+        <div>
+          
+        <div className="task-wrapper" key="firstName">
+         <div className="text-containter">
+          <h3 className="showText">Project Description: {task.desc}</h3>
+          <h3 className="showText"> Also,  {task.firstName} </h3>
+          <h3 className="showText">{task.lastName}</h3>
+          <h3 className="showText">Please Complete by:  {task.completed}</h3>
+          </div>
+          <img className="taskImg" src={task.image} alt='No Picture added to this task' />
           <p>
-            {task.firstName} {task.lastName}
+            {/* some texts here */}
           </p>
-          <button id={task.id} onClick={this.deleteTask}>delete</button>
+            <div>
+            <button className="taskLink" id={task.id} onClick={this.deleteTask}>Complete</button>
+            <button className="delButton" id={task.id} onClick={this.deleteTask}>delete</button>
+            <Link className="taskLink" to="/TaskForm">Add Tasks</Link></div>
+          </div>
         </div>
       );
     });
     return (
       <div className='App'>
-        <form onSubmit={this.createTask}>
+        <h1>Task List</h1>
+        {/* <form className="taskInput" onSubmit={this.createTask}>
           <input
             name='eventId'
+            className="taskInputCell"
             type='text'
             placeholder='enter eventId here'
             value={this.state.eventId}
@@ -83,6 +100,7 @@ class TaskList extends Component {
 
 <input
             name='desc'
+            className="taskInputCell"
             type='text'
             placeholder='enter new task here'
             value={this.state.desc}
@@ -91,14 +109,16 @@ class TaskList extends Component {
 
 <input
             name='firstName'
+            className="taskInputCell"
             type='text'
             placeholder='enter firstName here'
             value={this.state.firstName}
             onChange={this.taskOnChange}
           />
-
-<input
+<p> Last Name </p>
+<input      
             name='lastName'
+            className="taskInputCell"
             type='text'
             placeholder='enter last name here'
             value={this.state.lastName}
@@ -107,6 +127,7 @@ class TaskList extends Component {
 
 <input
             name='image'
+            className="taskInputCell"
             type='text'
             placeholder='enter pic link here'
             value={this.state.image}
@@ -115,6 +136,7 @@ class TaskList extends Component {
 
 <input
             name='completed'
+            className="taskInputCell"
             type='text'
             placeholder='is this complete?'
             value={this.state.completed}
@@ -122,10 +144,11 @@ class TaskList extends Component {
           />
 
           <input type='submit' value='Add Task' />
-        </form>
-       
+        </form> */}
+     
         {tasks}
       </div>
+    
     );
   }
 
