@@ -13,7 +13,7 @@ const Header = (props) => {
       <nav>
         <div className="headerNav">
           <div className="logoTitleHeader">
-            <img className="logoNav" src="https://i.imgur.com/hK56ljr.jpg"></img>
+            <img className="logoNav" src="https://i.imgur.com/nzjlYmo.jpg"></img>
             <div className="navTitle">
               <h1 className="title1">William Tasch </h1>
               <h1 className="title2">Portfolio</h1>
@@ -22,15 +22,17 @@ const Header = (props) => {
           
          
           
-            <Link className="headerLink" to="/Home">Home</Link>
-            <a href="#" className="headerLink">About Me</a> |
-            <a href="#" className="headerLink">Objective</a> |
-            <a href="#" className="headerLink">Skills</a> |
-            <a href="#" className="headerLink">Experience</a> |
+            <Link className="headerLink" to="/Home">About</Link> |
+            <Link className="headerLink" to="/Geo">Bio</Link> |
+            <Link className="headerLink" to="/Objective">Objective</Link> |
+            <Link className="headerLink" to="/Skill">Computer Skills</Link> |
+            <Link className="headerLink" to="/Prog">Programming Experience</Link> |
+            <Link className="headerLink" to="/Hobby">Hobbies</Link> |
+            {/* <a href="#" className="headerLink">Experience</a> |
             <a href="#" className="headerLink">Education</a> |
-            <a href="#" className="headerLink">Hobbies</a> |
-            <a href="#" className="headerLink">Resume</a> |
-            <a href="#">Contact Info</a>
+            <a href="#" className="headerLink">Hobbies</a> | */}
+             <Link className="headerLink" to="/Resume">Resume</Link> |
+             <Link className="headerLink" to="/Contact">Contact</Link>
    
           {/* <Link className="headerLink" to="/users">Users</Link> */}
           

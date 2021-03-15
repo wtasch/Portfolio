@@ -27,7 +27,7 @@ const Home = (props) => {
       <a href="#">Contact Info</a>
     </nav> */}
   {/* </header> */}
-<img src="https://i.imgur.com/btLoK9w.png" alt="This is William Tasch" />
+<img src="https://i.imgur.com/8o8nPp9.jpg" alt="This is William Tasch" />
   <main>
     <h2>About Bill</h2>
 

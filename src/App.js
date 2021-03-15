@@ -5,18 +5,18 @@ import './App.css';
 import { BrowserRouter as Router } from 'react-router-dom'
 
 import Profile from './components/Profile';
-import KidsPage from './components/KidsPage';
-import Parent from './components/Parent';
-import ParentForm from './components/ParentForm';
+import Skill from './components/Skill';
+import Prog from './components/Prog';
+import Hobby from './components/Hobby';
 import Signup from './components/Signup';
 import TaskList from './components/TaskList';
 import TaskForm from './components/TaskForm';
 import Header from './components/Header';
 import Home from './components/Home';
-import EventList from './components/EventList';
-import EventForm from './components/EventForm';
-import PartList from './components/PartList';
-import PartForm from './components/PartForm';
+import Objective from './components/Objective';
+import Geo from './components/Geo';
+import Contact from './components/Contact';
+import Resume from './components/Resume';
 import ShopList from './components/ShopList';
 import ShopForm from './components/ShopForm';
 
@@ -104,6 +104,7 @@ class App extends Component {
           {/* <TaskList /> */}
           {/* <Signup /> */}
           {/* <Parent />  */}
+          {/* <Home/> */}
           
           
           
@@ -123,12 +124,12 @@ class App extends Component {
             <Profile user={this.state.user} />
           )} />
 
-          <Route path="/EventList" render={() => (
-            <EventList />
+          <Route path="/Objective" render={() => (
+            <Objective />
           )} />
 
-          <Route path="/EventForm" render={() => (
-          <EventForm
+          <Route path="/Geo" render={() => (
+          <Geo
           //  potentialKids={this.state.potentialKids}
           //  addKid={this.addKid} 
           />
@@ -164,38 +165,36 @@ class App extends Component {
          )} /> 
 
 
-        <Route path="/PartList" render={() => (
-          <PartList
+        <Route path="/Contact" render={() => (
+          <Contact
           //  potentialKids={this.state.potentialKids}
           //  addKid={this.addKid} 
           />
          )} /> 
 
-          <Route path="/PartForm" render={() => (
-          <PartForm
+          <Route path="/Resume" render={() => (
+          <Resume
           //  potentialKids={this.state.potentialKids}
           //  addKid={this.addKid} 
           />
          )} /> 
         
-           <Route path="/Parent" render={() => (
-          <Parent
+           <Route path="/Prog" render={() => (
+          <Prog
           //  potentialKids={this.state.potentialKids}
           //  addKid={this.addKid} 
            />
         )} />
 
-          <Route path="/ParentForm" render={() => (
-          <ParentForm
+          <Route path="/Hobby" render={() => (
+          <Hobby
           //  potentialKids={this.state.potentialKids}
           //  addKid={this.addKid} 
           />
          )} /> 
 
-          <Route path="/KidsPage" render={() => (
-          <KidsPage
-           potentialKids={this.state.potentialKids}
-           addKid={this.addKid} />
+          <Route path="/Skill" render={() => (
+          <Skill/>
         )} />
       {/* </Switch> */}
 
