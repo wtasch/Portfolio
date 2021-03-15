@@ -73,9 +73,14 @@ JavaScript, Python(beginner), HTML, CSS, Sequelize, Express, Node.js, React.
       Allen Bradley Studio, SQL Management Studio, Ignition, Creo Modeling, 3D Printing.
       <br></br><br></br>
       Developed Computer Simulation Models for Factory Systems and Automated Manufactuing.
-
+      <br></br><br></br>
+      Software Enginneer Certification from General Assembly.  Here are a few Course Projects:
+      
+      <br></br><br></br>
+      <a href="https://wtasch.github.io/Hangman-Project-1/" className="headerLink"> - Project1 HangMan Game-Click to Play</a>
+      <br></br><br></br>
+      <a href="http://couchslothmovies.surge.sh/" className="headerLink"> - Project3 Movie app-Click to Play (this was a Team Project)</a>
       </p>
-
     
     
   </main>

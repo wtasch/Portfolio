@@ -61,7 +61,7 @@ class Contact extends Component {
       <div className='input-containere'>
 
         <body>
-        <img src="https://i.imgur.com/8o8nPp9.jpg" alt="This is William Tasch" />
+        <img src="https://i.imgur.com/btLoK9w.png" alt="This is William Tasch" />
            <main>
    
     <h2>William E. Tasch</h2>
@@ -73,6 +73,7 @@ class Contact extends Component {
       email: taschwilliam@johndeere.com
       <br></br><br></br>
       Github:   https://github.com/wtasch
+      
       </p>
 
     
